@@ -4,22 +4,38 @@ test:
 	swift test
 
 build:
-	swift build -Xcc -fblocks
+	swift build
+#	swift build -Xcc -fblocks
 #	swift build -Xswiftc -j1
 
 rebuild: clean build
 
 clean:
-	swift build --clean
+	swift package clean
 
 distclean:
 	swift build --clean dist
 
-fetch-master:
+edit-all:
 	swift package fetch
-	(cd Packages/CEvent-*; git checkout master; git pull)
-	(cd Packages/ConfigFile-*; git checkout master; git pull)
-	(cd Packages/Utils-*; git checkout master; git pull)
+	swift package edit --branch tmp CollectionUtils
+	swift package edit --branch tmp ConfigFile
+	swift package edit --branch tmp ConsolePlugin
+	swift package edit --branch tmp ScannerUtils
+	swift package edit --branch tmp Smud
+	swift package edit --branch tmp StringUtils
+	swift package edit --branch tmp TextUserInterface
+	swift package edit --branch tmp Utils
+
+checkout-master-all:
+	git -C Packages/CollectionUtils checkout master
+	git -C Packages/ConfigFile checkout master
+	git -C Packages/ConsolePlugin checkout master
+	git -C Packages/ScannerUtils checkout master
+	git -C Packages/Smud checkout master
+	git -C Packages/StringUtils checkout master
+	git -C Packages/TextUserInterface checkout master
+	git -C Packages/Utils checkout master
 
 tags:
 	ctags -R ./ ../swift-corelibs-foundation/ ../swift-corelibs-libdispatch/
