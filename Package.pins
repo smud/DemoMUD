@@ -1,7 +1,54 @@
 {
   "autoPin": true,
   "pins": [
-
+    {
+      "package": "CollectionUtils",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/CollectionUtils.git",
+      "version": "1.0.1"
+    },
+    {
+      "package": "ConfigFile",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/ConfigFile.git",
+      "version": "1.1.0"
+    },
+    {
+      "package": "ConsolePlugin",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/ConsolePlugin.git",
+      "version": "0.0.2"
+    },
+    {
+      "package": "ScannerUtils",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/ScannerUtils.git",
+      "version": "1.0.5"
+    },
+    {
+      "package": "Smud",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/Smud.git",
+      "version": "0.0.2"
+    },
+    {
+      "package": "StringUtils",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/StringUtils.git",
+      "version": "1.0.2"
+    },
+    {
+      "package": "TextUserInterface",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/TextUserInterface.git",
+      "version": "0.0.2"
+    },
+    {
+      "package": "Utils",
+      "reason": null,
+      "repositoryURL": "https://github.com/smud/Utils.git",
+      "version": "1.0.1"
+    }
   ],
   "version": 1
 }
